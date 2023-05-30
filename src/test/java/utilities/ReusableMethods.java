@@ -1,11 +1,9 @@
 package utilities;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import pages.Admin_loginPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -70,4 +68,21 @@ public class ReusableMethods {
         }
         return elemTexts;
     }
+    public static void adminlogin(){
+        Driver.getDriver().get(ConfigReader.getProperty("twAdminUrl"));
+        Admin_loginPage admin_loginPage = new Admin_loginPage();
+        admin_loginPage.adminEmail.click();
+
+        admin_loginPage.adminEmail.sendKeys(ConfigReader.getProperty("admin31email"));
+        admin_loginPage.adminPassword.sendKeys(ConfigReader.getProperty("adminsifre") + Keys.ENTER);
+    }
+    public static void bekle(int saniye) {
+        try {
+            Thread.sleep(saniye * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
