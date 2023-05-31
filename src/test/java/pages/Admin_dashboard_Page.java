@@ -7,6 +7,7 @@ import utilities.Driver;
 
 public class Admin_dashboard_Page {
     public Admin_dashboard_Page(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
     @FindBy(xpath = "(//span)[1]")
@@ -38,5 +39,4 @@ public class Admin_dashboard_Page {
     @FindBy(xpath = "(//span)[14]")
     public WebElement subscriberButton;
     }
-
 

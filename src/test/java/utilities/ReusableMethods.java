@@ -71,10 +71,10 @@ public class ReusableMethods {
     public static void adminlogin(){
         Driver.getDriver().get(ConfigReader.getProperty("twAdminUrl"));
         Admin_loginPage admin_loginPage = new Admin_loginPage();
-        admin_loginPage.adminEmail.click();
+        admin_loginPage.email.click();
 
-        admin_loginPage.adminEmail.sendKeys(ConfigReader.getProperty("admin31email"));
-        admin_loginPage.adminPassword.sendKeys(ConfigReader.getProperty("adminsifre") + Keys.ENTER);
+        admin_loginPage.email.sendKeys(ConfigReader.getProperty("admin31email"));
+        admin_loginPage.password.sendKeys(ConfigReader.getProperty("adminsifre") + Keys.ENTER);
     }
     public static void bekle(int saniye) {
         try {
@@ -83,6 +83,4 @@ public class ReusableMethods {
             e.printStackTrace();
         }
     }
-
-
 }

@@ -6,18 +6,14 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class Admin_loginPage {
-
-    public Admin_loginPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
-
-
-
+    public Admin_loginPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
-    @FindBy(id = "email")
-    public WebElement adminEmail;
-    @FindBy(name = "password")
-    public WebElement adminPassword;
-    @FindBy(xpath = "(//span)[1]")
-    public WebElement adminDashboard;
 
-}
+        @FindBy(id= "email")
+        public WebElement email;
+        @FindBy(id = "password")
+        public WebElement password;
+    }
+
+
