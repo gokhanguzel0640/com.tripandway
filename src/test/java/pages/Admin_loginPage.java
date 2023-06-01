@@ -14,6 +14,9 @@ public class Admin_loginPage {
         public WebElement email;
         @FindBy(id = "password")
         public WebElement password;
+
+        @FindBy (xpath = "//button[text()='Login']")
+        public WebElement adminLoginButton;
     }
 
 
