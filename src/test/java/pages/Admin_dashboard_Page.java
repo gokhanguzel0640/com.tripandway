@@ -19,7 +19,7 @@ public class Admin_dashboard_Page {
     @FindBy(xpath = "(//span)[4]")
     public WebElement paymentSettingsButton;
     @FindBy(xpath = "(//span)[5]")
-    public WebElement blockSectionButton;
+    public WebElement blogSectionButton;
     @FindBy(xpath = "(//span)[6]")
     public WebElement destinationsButton;
     @FindBy(xpath = "(//span)[7]")
