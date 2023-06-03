@@ -29,5 +29,7 @@ public class Traveller_loginPage {
     @FindBy(className = "logo")
     public WebElement anasayfaGoruntuleme;
 
+
+
 }
 
