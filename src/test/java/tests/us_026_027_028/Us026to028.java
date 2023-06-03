@@ -22,8 +22,9 @@ public class Us026to028 extends TestBaseRapor {
         extentTest.info("02_Admin email kutusuna tıklar");
         admin_loginPage.email.sendKeys(ConfigReader.getProperty("admin31email"));
         extentTest.info("03_Admin email kutusuna geçerli email girer");
-        admin_loginPage.password.sendKeys(ConfigReader.getProperty("adminsifre") + Keys.ENTER);
+        admin_loginPage.password.sendKeys(ConfigReader.getProperty("adminsifre") );
         extentTest.info("04_Admin password kutusuna geçerli password girer ve enter tusuna basar");
+        admin_loginPage.loginButton.click();
         Admin_dashboard_Page admin_dashboard_page=new Admin_dashboard_Page();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(admin_dashboard_page.dashboardButton.isDisplayed());

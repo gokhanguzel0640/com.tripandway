@@ -17,10 +17,20 @@ public class Admin_dashboard_Us27_Us28_Page {
     @FindBy(xpath = "//*[@href='https://qa.tripandway.com/admin/category/create']")
     public WebElement blogCreateNewButton;
 
-   // category_name
-   // category_slug
-    seo_title
-    seo_meta_description
+
+
+    @FindBy (xpath = "//*[text()='Category is added successfully!")
+     public WebElement categoryAddedAlert;
+    @FindBy (xpath = "//*[@href=\"https://qa.tripandway.com/admin/category/edit/1]")
+    public WebElement categoryedit;
+    @FindBy (xpath = "// *[@href=\"https://qa.tripandway.com/admin/category/delete/1")
+    public WebElement categorydelete;
+    @FindBy (xpath = "//*[@type='search']")
+    public WebElement search;
+
+
+
+
 
 
 
