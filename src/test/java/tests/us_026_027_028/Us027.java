@@ -46,24 +46,33 @@ public class Us027 extends TestBaseRapor {
         SoftAssert softAssert = new SoftAssert();
 
         Admin_dashboard_Page admin_dashboard_page=new Admin_dashboard_Page();
-        softAssert.assertTrue(admin_dashboard_page.generalSettingsButton.isDisplayed());
-        extentTest.info("06_Admin verifies that he can display 'General Settings'");
-
-        softAssert.assertTrue(admin_dashboard_page.pageSettingsButton.isDisplayed());
-        extentTest.info("07_Admin verifies that he can display 'Page Settings'");
-
-        softAssert.assertTrue(admin_dashboard_page.paymentSettingsButton.isDisplayed());
-        extentTest.info("08_Admin verifies that he can display 'Payment Settings'");
-
-        softAssert.assertTrue(admin_dashboard_page.dynamicPagesButton.isDisplayed());
-        extentTest.info("09_Admin verifies that he can display 'Dynamic Pages'");
-
-        softAssert.assertTrue(admin_dashboard_page.languageButton.isDisplayed());
-        extentTest.info("10_Admin verifies that he can display 'Language'");
-
-        softAssert.assertTrue(admin_dashboard_page.emailTemplateButton.isDisplayed());
-        extentTest.info("11_Admin verifies that he can display 'Email Template'");
-        softAssert.assertAll();
+        admin_dashboard_page.generalSettingsButton.click();
+        extentTest.info("06_Admin clicks 'General Settings' button");
+        softAssert.assertTrue(admin_dashboard_page.logoButton.isDisplayed());
+        extentTest.info("07_Admin verifies that he can display 'Logo' text");
+        admin_dashboard_page.pageSettingsButton.click();
+        extentTest.info("08_Admin clicks 'Page Settings' button");
+        softAssert.assertTrue(admin_dashboard_page.homeButton.isDisplayed());
+        extentTest.info("09_Admin verifies that he can display 'Home' text");
+        admin_dashboard_page.paymentSettingsButton.click();
+        extentTest.info("10_Admin clicks 'Payment Settings' button");
+        softAssert.assertTrue(admin_dashboard_page.paymentInformationButton.isDisplayed());
+        extentTest.info("11_Admin verifies that he can display 'Payment Information' text");
+        ReusableMethods.bekle(3);
+        admin_dashboard_page.dynamicPagesButton.click();
+        extentTest.info("12_Admin clicks 'Dynamic Pages' button");
+        ReusableMethods.bekle(5);
+        softAssert.assertTrue(admin_dashboard_page.dynamicPagesText.isDisplayed());
+        extentTest.info("13_Admin verifies that he can display 'Dynamic Pages' text");
+        admin_dashboard_page.languageButton.click();
+        extentTest.info("14_Admin clicks 'Language' button");
+        softAssert.assertTrue(admin_dashboard_page.languageSettingText.isDisplayed());
+        extentTest.info("15_Admin verifies that he can display 'Language Settings' text");
+        admin_dashboard_page.emailTemplateButton.click();
+        extentTest.info("16_Admin clicks 'Email Template' button");
+        softAssert.assertTrue(admin_dashboard_page.emailTemplatesText.isDisplayed());
+        extentTest.info("17_Admin verifies that he can display 'Email Template' text");
+        //softAssert.assertAll();
         extentTest.pass("After logging in as an admin,I can sequentially view the following pages: " +
                         "General Settings, Page Settings, Payment Settings, Dynamic Pages, Language, " +
                         "Web Site Section, and Email Template.");
