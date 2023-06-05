@@ -14,13 +14,7 @@ import utilities.TestBaseRapor;
 public class Us026 extends TestBaseRapor {
     @Test
     public void Us026() {
-     //  01_Admin goes to https://qa.tripandway.com/admin/login
-     //  02_Admin clicks on the email box
-     //  03_Admin enters a valid email in the email box
-     //  04_Admin enters a valid password in the password box
-     //  05_Admin clicks the login button
-     //  06_Admin verifies that admin dashboard is displayed
-    extentTest=extentReports.createTest("Admin Succesful Login Test",
+         extentTest=extentReports.createTest("Admin Succesful Login Test",
             "I should be able to verify that I can access " +
             "the administration panel of the website using admin credentials and view the admin dashboard");
     Driver.getDriver().get(ConfigReader.getProperty("twAdminUrl"));
