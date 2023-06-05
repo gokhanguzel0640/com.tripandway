@@ -15,18 +15,7 @@ import utilities.TestBaseRapor;
 public class Us027 extends TestBaseRapor {
     @Test
     public void Us027 (){
-      //01_Admin goes to https://qa.tripandway.com/admin/login
-      //02_Admin clicks on the email box
-      //03_Admin enters a valid email in the email box
-      //04_Admin enters a valid password in the password box
-      //05_Admin clicks the login button
-      //06_Admin verifies that he can display 'General Settings'
-      //07_Admin verifies that he can display 'Page Settings'
-      //08_Admin verifies that he can display 'Payment Settings'
-      //09_Admin verifies that he can display 'Dynamic Pages'
-      //10_Admin verifies that he can display 'Language'
-      //11_Admin verifies that he can display 'Email Template'
-        extentTest=extentReports.createTest("Admin Dashboard Elements Test",
+             extentTest=extentReports.createTest("Admin Dashboard Elements Test",
                 "After logging in as an admin, I should be able to verify that " +
                         "I can sequentially view the following pages: " +
                         "General Settings, Page Settings, Payment Settings, " +
