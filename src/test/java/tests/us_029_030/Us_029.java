@@ -45,7 +45,7 @@ public class Us_029 extends TestBaseRapor{
         extentTest.info("'Blogs' butonuna tıklar");
 
         // 04_ 'Add New' butonuna tıklar
-        admin_dashboard_us29_us30_page.addNewButton.click();
+        admin_dashboard_us29_us30_page.addNewBlogsButton.click();
         extentTest.info("'Add New' butonuna tıklar");
 
         // 05_ Sırasıyla 'Blog Title', 'Blog Slug', 'Blog Content', 'Blog Short Content' bölümelerini doldurur
@@ -95,7 +95,6 @@ public class Us_029 extends TestBaseRapor{
         softAssert.assertTrue(admin_dashboard_us29_us30_page.newBlogText.isDisplayed());
         extentTest.pass("'Blogs' sayfasına giderek blog yazısının başırılı bir şekilde eklendiğini test eder");
 
-        ReusableMethods.bekle(3);
 
     }
         @Test
