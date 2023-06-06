@@ -8,6 +8,7 @@ import utilities.Driver;
 
 public class Admin_loginPage {
     public Admin_loginPage() {
+
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -17,7 +18,6 @@ public class Admin_loginPage {
         public WebElement password;
         @FindBy(xpath = "//*[@type='submit']")
         public WebElement loginButton;
-
-    }
+}
 
 

@@ -31,7 +31,7 @@ public class US_036  extends TestBaseRapor{
           extentTest.info(" 02_Admin user enters the email address");
          adminLoginPage.password.sendKeys(ConfigReader.getProperty("adminsifre"));
           extentTest.info(" 03_Admin user enters the password");
-         adminLoginPage.loginBox.submit();
+         adminLoginPage.loginButton.submit();
           extentTest.info(" 04_Admin user clicks on the Login button");
     Admin_dashboard_Page adminDashboardPage = new Admin_dashboard_Page();
          adminDashboardPage.subscriberButton.click();
