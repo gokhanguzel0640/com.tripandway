@@ -19,7 +19,7 @@ public class Admin_dashboard_Page {
     @FindBy(xpath = "(//span)[4]")
     public WebElement paymentSettingsButton;
     @FindBy(xpath = "(//span)[5]")
-    public WebElement blockSectionButton;
+    public WebElement blogSectionButton;
     @FindBy(xpath = "(//span)[6]")
     public WebElement destinationsButton;
     @FindBy(xpath = "(//span)[7]")
@@ -38,5 +38,19 @@ public class Admin_dashboard_Page {
     public WebElement emailTemplateButton;
     @FindBy(xpath = "(//span)[14]")
     public WebElement subscriberButton;
+    @FindBy(xpath = "//*[text()='Logo']")
+    public WebElement logoButton;
+    @FindBy(xpath = "//*[text()='Home']")
+    public WebElement homeButton;
+    @FindBy(xpath = "//*[text()='Payment Information']")
+    public WebElement paymentInformationButton;
+    @FindBy(xpath = "(//*[text()='Dynamic Pages'])[2]")
+    public WebElement dynamicPagesText;
+    @FindBy(xpath = "//*[text()='Language Setting']")
+    public WebElement languageSettingText;
+    @FindBy(xpath = "//*[text()='Email Templates']")
+    public WebElement emailTemplatesText;
+
+
     }
 
