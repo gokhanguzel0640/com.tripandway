@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class Traveller_loginPage {
+
     public Traveller_loginPage(){
 
         PageFactory.initElements(Driver.getDriver(),this);
