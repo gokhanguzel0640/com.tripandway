@@ -38,5 +38,7 @@ public class Admin_dashboard_Page {
     public WebElement emailTemplateButton;
     @FindBy(xpath = "(//span)[14]")
     public WebElement subscriberButton;
-    }
+
+}
+
 
