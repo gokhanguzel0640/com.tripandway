@@ -1,5 +1,6 @@
 package pages;
 
+import org.bouncycastle.pqc.crypto.newhope.NHOtherInfoGenerator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +17,7 @@ public class Admin_loginPage {
         @FindBy(id = "password")
         public WebElement password;
         @FindBy(xpath = "//*[@type='submit']")
-        public WebElement loginBox;
-    }
+        public WebElement loginButton;
+}
 
 

@@ -20,7 +20,7 @@ public class US_037 extends TestBaseRapor {
          extentTest.info(" 02_Admin user enters the email address");
         adminLoginPage.password.sendKeys(ConfigReader.getProperty("adminsifre"));
          extentTest.info(" 03_Admin user enters the password");
-        adminLoginPage.loginBox.submit();
+        adminLoginPage.loginButton.submit();
          extentTest.info(" 04_Admin user clicks on the Login button");
     Admin_dashboard_Us36_Us37_Us38_Us39_Us40_Us41_Page admin_dashboard_us36_us37_us38_us39_us40_us41_page=new
                Admin_dashboard_Us36_Us37_Us38_Us39_Us40_Us41_Page();
