@@ -7,6 +7,7 @@ import utilities.Driver;
 public class US001 {
     //Bir ziyaretçi olarak siteyi kullanabilmek icin
     // web sitesine erişebildiğimi doğrulayabilmeliyim
+
     @Test
     public void erisimTesti() {
         Driver.getDriver().get(ConfigReader.getProperty ("twUrl"));
