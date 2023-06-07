@@ -11,6 +11,8 @@ public class FooterPage_US04 {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
+    @FindBy(xpath = "//*[@type='button']")
+    public WebElement acceptbuton;
 
     @FindBy (xpath ="(//div[@class='footer-item mt_30']/ul/li)[1]")
     public WebElement featured1;
@@ -23,6 +25,9 @@ public class FooterPage_US04 {
 
     @FindBy (xpath ="(//div[@class='footer-item mt_30']/ul/li)[4]")
     public WebElement featured4;
+
+    @FindBy (xpath ="(//div[@class='footer-item mt_30']/ul/li)[5]")
+    public WebElement featured5;
 
 
 }
