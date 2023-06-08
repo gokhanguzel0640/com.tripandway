@@ -12,31 +12,31 @@ import java.io.IOException;
 public class Us_019 extends TestBaseRapor {
     @Test
     public void test01() throws IOException {
-        extentTest = extentReports.createTest("Traveller login testi",
-                "kullanici kaydoldugu gmail ve password bilgilerini girdikten sonra login olmali\n" +
-                        "site anasayfasına gidebildiğini doğrulayabilmeli");
+        extentTest = extentReports.createTest("Traveller login test",
+                "As a user I can log in to the website using the email and password information I used during registration.   )" +
+                        "I should also confirm that I can access the site's homepage after logging in.gi");
 
         Driver.getDriver().get(ConfigReader.getProperty("twUrl"));
-        extentTest.info(" kullanici https://qa.tripandway.com/ sitesine gider");
+        extentTest.info(" The user goes to https://qa.tripandway.com/");
         Traveller_loginPage travellerLoginPage = new Traveller_loginPage();
 
         travellerLoginPage.acceptButonu.click();
-        extentTest.info("ACCEPT butonu");
+        extentTest.info("The user clicks ACCEPT button");
 
         travellerLoginPage.loginButonuGiris.click();
-        extentTest.info("Login butonu'na tiklar");
+        extentTest.info("The user clicks login button");
 
         travellerLoginPage.emailAddressKutusu.sendKeys("takimcalismasi11@gmail.com");
-        extentTest.info("Kullanici Email Address bilgilerini girer");
+        extentTest.info("The user enters Email Address information");
 
         travellerLoginPage.passwordKutusu.sendKeys("deneme14.");
-        extentTest.info("Kullanici Password bilgilerini girer");
+        extentTest.info("The user enters Password information");
 
         travellerLoginPage.loginButonu.click();
-        extentTest.info("Kullanici Login butonu'na tiklar");
+        extentTest.info("The user clicks Login button");
 
         Assert.assertTrue(travellerLoginPage.anasayfaGoruntuleme.isDisplayed());
-        extentTest.pass("Kullanicinin anasayfaya gidebildiği dogrulandi ve test edildi");
+        extentTest.pass("The user verifies and tests that the user can navigate to the homepage");
 
 
     }
