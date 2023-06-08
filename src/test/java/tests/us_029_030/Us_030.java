@@ -18,7 +18,7 @@ public class Us_030 extends TestBaseRapor {
     @Test
     public void test01(){
         extentTest = extentReports.createTest("Admin Blog Section Test"+
-                "\nKullanici Admin girişi yaptıktan sonra Blog Section bölümüne yeni blog yazısı ekleyebilmeli");
+                "\nAfter logging in as admin, I should be able to verify that I can add a new destination to the Destinations section");
 
 
         // 01_ User reaches to https://qa.tripandway.com/admin/login,
@@ -111,7 +111,7 @@ public class Us_030 extends TestBaseRapor {
     @Test
     public void test02(){
         extentTest = extentReports.createTest("Admin Blog Section Testi"+
-                "\nKullanici Admin girişi yaptıktan sonra Blog Section bölümüne yeni blog yazısı ekleyebilmeli");
+                "\nUser should be able to verify that the added destination can be edited");
 
 
         // 01_ User reaches to https://qa.tripandway.com/admin/login,
