@@ -6,6 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 public class HomePage {
+
+
+
     public HomePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -41,5 +44,4 @@ public class HomePage {
     @FindBy(xpath = "//a[@href='https://qa.tripandway.com/traveller/login']")
     public WebElement login;
     }
-
 
