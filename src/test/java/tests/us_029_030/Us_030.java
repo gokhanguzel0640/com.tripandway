@@ -17,7 +17,7 @@ public class Us_030 extends TestBaseRapor {
 
     @Test
     public void test01(){
-        extentTest = extentReports.createTest("Admin Blog Section Test"+
+        extentTest = extentReports.createTest("Admin Destinationgit  Section Test"+
                 "\nAfter logging in as admin, I should be able to verify that I can add a new destination to the Destinations section");
 
 
@@ -110,7 +110,7 @@ public class Us_030 extends TestBaseRapor {
 
     @Test
     public void test02(){
-        extentTest = extentReports.createTest("Admin Blog Section Testi"+
+        extentTest = extentReports.createTest("Admin Destination Section Test"+
                 "\nUser should be able to verify that the added destination can be edited");
 
 
