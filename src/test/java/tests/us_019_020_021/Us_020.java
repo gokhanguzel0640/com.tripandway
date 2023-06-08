@@ -13,38 +13,37 @@ import utilities.TestBaseRapor;
 public class Us_020 extends TestBaseRapor {
     @Test
     public void test01() throws InterruptedException {
-        extentTest=extentReports.createTest("Traveller dashboard testi",
-                "Kullanici kaydoldugu gmail ve password bilgilerini girdikten sonra login olup\n"+
-                        "Profil bilgilerini düzenleyebildigini dogrulayabilmeli");
+        extentTest=extentReports.createTest("Traveller dashboard test",
+                "As a user, I should be able to verify that I can edit my profile information after logging in");
         Driver.getDriver().get(ConfigReader.getProperty("twUrl"));
-        extentTest.info("Kullanici https://qa.tripandway.com/ sitesine gider");
+        extentTest.info("User goes to https://qa.tripandway.com/");
         Traveller_loginPage travellerLoginPage=new Traveller_loginPage();
         travellerLoginPage.acceptButonu.click();
-        extentTest.info("ACCEPT butonu");
+        extentTest.info("User clicks ACCEPT button");
         travellerLoginPage.loginButonuGiris.click();
-        extentTest.info("Kullanici Login butonu'na tıklar");
+        extentTest.info("User clicks login button");
         travellerLoginPage.emailAddressKutusu.sendKeys("takimcalismasi11@gmail.com");
-        extentTest.info("Kullanici Email Address bilgilerini girer");
+        extentTest.info("User enters Email Address information");
         travellerLoginPage.passwordKutusu.sendKeys("deneme14.");
-        extentTest.info("Kullanici Password bilgilerini girer");
+        extentTest.info("User enters Password information");
         travellerLoginPage.loginButonu.submit();
-        extentTest.info("Kullanici Login butonuna tıklar");
+        extentTest.info("User clicks Login button");
 
         Traveller_dashboard_Us20_Us21_Page travellerDashboardUs20Us21Page=new Traveller_dashboard_Us20_Us21_Page();
         travellerDashboardUs20Us21Page.updateProfileButonu.click();
-        extentTest.info("Kullanici Update Profile butonuna tiklar");
+        extentTest.info("User clicks Update Profile button");
         travellerDashboardUs20Us21Page.nameDuzenlemeButonu.sendKeys(("  ")+"Tankisi");
-        extentTest.info("Kullanici name bilgisini günceller");
+        extentTest.info("User updates user name");
         travellerDashboardUs20Us21Page.addressDuzenlemeButonu.sendKeys((" ")+"Merkez");
-        extentTest.info("Kullanici address bilgisini günceller");
+        extentTest.info("User updates user address information");
         travellerDashboardUs20Us21Page.zipDuzenlemeButonu.clear();
-        extentTest.info("Kullanici eski zip numarasini siler");
+        extentTest.info("User deletes old zip number");
         travellerDashboardUs20Us21Page.zipDuzenlemeButonu.sendKeys("10000");
-        extentTest.info("Kullanici yeni zip numarası yazar");
+        extentTest.info("User writes new zip number");
         travellerDashboardUs20Us21Page.updateButonu.submit();
-        extentTest.info("Kullanici update Butonu'na tiklar");
+        extentTest.info("User clicks the Update Button");
         Assert.assertTrue(travellerDashboardUs20Us21Page.profileIsUpdatedSuccessfully.isDisplayed());
-        extentTest.pass("Profile Is Updated Success fully'i yazisi goruntulendi ve test edildi");
+        extentTest.pass("Profile Is Updated Successfully! text has been viewed and tested");
 
 
 
