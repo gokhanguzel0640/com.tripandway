@@ -50,7 +50,7 @@ public class Admin_dashboard_Us31_Us32_Page {
     public WebElement isFeaturedList;
     @FindBy(xpath = "//option[@value='No']")
     public WebElement isFeaturedNo;
-    @FindBy(xpath = "//*[@class='select2-selection__arrow']")
+    @FindBy(xpath = "//select[@name='destination_id']")
     public WebElement destinationList;
     @FindBy(xpath = "//input[@name='seo_title']")
     public WebElement title;
@@ -62,9 +62,26 @@ public class Admin_dashboard_Us31_Us32_Page {
     public WebElement actualAddText;
     @FindBy(xpath = "(//i[@class='fas fa-edit'])[7]")
     public WebElement editButton;
-
     @FindBy (xpath = "//*[text()='Update']")
     public WebElement updateButton;
+    @FindBy (xpath = "(//a[@class='nav-link'])[6]")
+    public WebElement ordersSection;
+    @FindBy (xpath = "//h1[@class='h3 mb-3 text-gray-800']")
+    public WebElement ordersText;
+    @FindBy (id = "dataTable_info")
+    public WebElement ordersAmount;
+    @FindBy(xpath = "(//span)[11]")
+    public WebElement orderButton;
+    @FindBy(xpath = "(//i[@class='fas fa-trash-alt'])[7]")
+    public WebElement deleteButton;
+    @FindBy(xpath = "//input[@name='p_name']")
+    public WebElement editNameBox;
+    @FindBy (xpath = "//*[text()='Update']")
+    public WebElement editUpdateButton;
+    @FindBy(xpath = "//*[text()='Package is updated successfully!']")
+    public WebElement uptadeSucText;
+    @FindBy(xpath = "//*[text()='Package is deleted successfully!']")
+    public WebElement deleteSucText;
 
 
 
