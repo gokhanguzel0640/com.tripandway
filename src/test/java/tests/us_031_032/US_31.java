@@ -64,7 +64,7 @@ public class US_31 extends TestBaseRapor{
         extentTest.info("User enters name and slug.");
         //8- User upload a photo
         String differentPath=System.getProperty("user.dir");
-        String samePath="/src/test/java/tests/us_031_032/lovepik-florence-italy-png-image_401448935_wh300.png";
+        String samePath="/src/test/java/tests/us_029_030/images.jpeg";
         String filePath=differentPath+samePath;
         admin_dashboard_us31_us32_page.uploadPhotoButton.sendKeys(filePath);
         extentTest.info("User uploads a photo.");
