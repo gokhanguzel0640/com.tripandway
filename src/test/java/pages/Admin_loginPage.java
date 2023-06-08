@@ -20,9 +20,9 @@ public class Admin_loginPage {
 
         @FindBy (xpath = "//button[text()='Login']")
         public WebElement adminLoginButton;
-    }
+    
         @FindBy(xpath = "//*[@type='submit']")
         public WebElement loginButton;
-}
+
 
 
