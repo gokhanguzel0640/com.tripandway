@@ -17,30 +17,31 @@ public class Us_030 extends TestBaseRapor {
 
     @Test
     public void test01(){
-        extentTest = extentReports.createTest("Admin Blog Section Testi"+
+        extentTest = extentReports.createTest("Admin Blog Section Test"+
                 "\nKullanici Admin girişi yaptıktan sonra Blog Section bölümüne yeni blog yazısı ekleyebilmeli");
 
 
-        // 01_ Kullanici https://qa.tripandway.com/admin/login adresine gider,
-        //                                                     Email adresini girer,
-        //                                                     Sifresini girer,
-        //                                                     Login butonuna tiklar
+        // 01_ User reaches to https://qa.tripandway.com/admin/login,
+        //                              Enters the e-mail address,
+        //                              Enters the password,
+        //                              Clicks on the Login button
+
 
         ReusableMethods.adminlogin();
-        extentTest.info("Kullanici https://qa.tripandway.com/admin/login adresine gider, " +
-                "\nEmail adresini girer, " +
-                "\nSifresini girer, " +
-                "\nLogin butonuna tiklar");
+        extentTest.info("User reaches to https://qa.tripandway.com/admin/login, \n" +
+                                                   "Enters the e-mail address, \n" +
+                                                   "Enters the password, \n" +
+                                                   "Clicks on the Login button");
 
         // 02_'Destination' butonuna tıklar
         Admin_dashboard_Page admin_dashboard_page = new Admin_dashboard_Page();
         admin_dashboard_page.destinationsButton.click();
-        extentTest.info("'Destination' butonuna tıklar");
+        extentTest.info("Clicks on the 'Destination' button");
 
         // 03_'Add New' butonuna tıklar
         Admin_dashboard_Us29_Us30_Page admin_dashboard_us29_us30_page = new Admin_dashboard_Us29_Us30_Page();
         admin_dashboard_us29_us30_page.addNewDestinationsButton.click();
-        extentTest.info("'Add New' butonuna tıklar");
+        extentTest.info("Clicks on the 'Add New' button");
 
         // 04_Sırasıyla 'Name', 'Slug', 'Heading', 'Short Description', 'Package Heading', 'Package Subheading',
         //              'Detail Heading', 'Detail Subheading' bölümlerini doldurur
@@ -64,15 +65,15 @@ public class Us_030 extends TestBaseRapor {
                 sendKeys(Keys.TAB).
                 perform();
 
-        extentTest.info("Sırasıyla 'Name', 'Slug', 'Heading', 'Short Description', 'Package Heading', " +
-                                "\n'Package Subheading', 'Detail Heading', 'Detail Subheading' bölümlerini doldurur");
+        extentTest.info("Fills 'Name', 'Slug', 'Heading', 'Short Description', 'Package Heading', " +
+                                "'Package Subheading', 'Detail Heading', 'Detail Subheading', respectively");
 
         // 05_'Dosya Seç' butonuna tıklar ve fotoğraf seçer
         String userDir = System.getProperty("user.dir");
-        String samePath = "/src/test/java/tests/us_029_030/images.jpeg";
+        String samePath = "/src/test/java/tests/us_029_030/image.jpg";
         String filePath = userDir + samePath;
         admin_dashboard_us29_us30_page.destinationDosyaSecButton.sendKeys(filePath);
-        extentTest.info("'Dosya Seç' butonuna tıklar ve fotoğraf seçer");
+        extentTest.info("Clicks on the 'Choose File' button and selects photo");
 
         // 06_Sırasıyla 'Introduction', 'Experience', 'Weather', 'Hotel', 'Transportation', 'Culture', 'Title',
         //              'Meta Description' bölümlerini doldurur ve 'Submit' butonuna tıklar
@@ -95,15 +96,15 @@ public class Us_030 extends TestBaseRapor {
                 perform();
 
         admin_dashboard_us29_us30_page.addDestinationSubmit.click();
-        extentTest.info("Sırasıyla 'Introduction', 'Experience', 'Weather', 'Hotel', 'Transportation', 'Culture'," +
-                                " 'Title', 'Meta Description' bölümlerini doldurur ve 'Submit' butonuna tıklar");
+        extentTest.info("Fills in the 'Introduction', 'Experience', 'Weather', 'Hotel', 'Transportation', " +
+                       "'Culture', 'Title', 'Meta Description' sections respectively and clicks the 'Submit' button");
 
         // 07_Destination'ın başarılı bir şekilde eklendiğini test eder
 
         SoftAssert softAssert = new SoftAssert();
 
         softAssert.assertTrue(admin_dashboard_us29_us30_page.newDestinationText.isDisplayed());
-        extentTest.pass("Destination'ın başarılı bir şekilde eklendiğini test eder");
+        extentTest.pass("Tests that the Destination has been successfully added");
 
     }
 
@@ -113,27 +114,27 @@ public class Us_030 extends TestBaseRapor {
                 "\nKullanici Admin girişi yaptıktan sonra Blog Section bölümüne yeni blog yazısı ekleyebilmeli");
 
 
-        // 01_ Kullanici https://qa.tripandway.com/admin/login adresine gider,
-        //                                                     Email adresini girer,
-        //                                                     Sifresini girer,
-        //                                                     Login butonuna tiklar
+        // 01_ User reaches to https://qa.tripandway.com/admin/login,
+        //                              Enters the e-mail address,
+        //                              Enters the password,
+        //                              Clicks on the Login button
 
         ReusableMethods.adminlogin();
-        extentTest.info("Kullanici https://qa.tripandway.com/admin/login adresine gider, " +
-                "\nEmail adresini girer, " +
-                "\nSifresini girer, " +
-                "\nLogin butonuna tiklar");
+        extentTest.info("User reaches to https://qa.tripandway.com/admin/login, \n" +
+                                                             "Enters the e-mail address, \n" +
+                                                             "Enters the password, \n" +
+                                                             "Clicks on the Login button");
 
 
         // 02_'Destination' butonuna tıklar
         Admin_dashboard_Page admin_dashboard_page = new Admin_dashboard_Page();
         admin_dashboard_page.destinationsButton.click();
-        extentTest.info("'Destination' butonuna tıklar");
+        extentTest.info("Clicks on the 'Destination' button");
 
         // 02_'Action' bölümünden 'edit' işaretinin bulunduğu butona tıklar
         Admin_dashboard_Us29_Us30_Page admin_dashboard_us29_us30_page = new Admin_dashboard_Us29_Us30_Page();
         admin_dashboard_us29_us30_page.editDestinationButton.click();
-        extentTest.info("'Action' bölümünden 'edit' işaretinin bulunduğu butona tıklar");
+        extentTest.info("Clicks the button via the 'edit' sign from the 'Action' section");
 
         // 03_İlgili birimleri düzenler ve 'Update' butonuna tıklayarak destination'ın düzenlenebilir olduğunu test eder
         admin_dashboard_us29_us30_page.destinationName.clear();
@@ -146,7 +147,7 @@ public class Us_030 extends TestBaseRapor {
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(admin_dashboard_us29_us30_page.editDestinationText.isDisplayed());
-        extentTest.pass("İlgili birimleri düzenler ve 'Update' butonuna tıklayarak destination'ın düzenlenebilir olduğunu test eder");
+        extentTest.pass("Edits the relevant units and tests that the destination is editable by clicking the 'Update' button");
 
 
     }
