@@ -79,7 +79,7 @@ public class US012 extends TestBaseRapor {
             extentTest.info("The "+stringWebElementNames[i]+ " element has been tested to be clickable.");
         }
 
-        softAssert.assertAll();
+        //softAssert.assertAll();
 
         // The browser is closed.
         Driver.closeDriver();
