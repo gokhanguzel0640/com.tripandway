@@ -36,7 +36,7 @@ public class Us_029 extends TestBaseRapor{
 
         // 02_ 'Blog Section' butonuna tıklar
         Admin_dashboard_Page admin_dashboard_page = new Admin_dashboard_Page();
-        admin_dashboard_page.blockSectionButton.click();
+        admin_dashboard_page.blogSectionButton.click();
         extentTest.info("'Blog Section' butonuna tıklar");
 
         // 03_ 'Blogs' butonuna tıklar
@@ -115,7 +115,7 @@ public class Us_029 extends TestBaseRapor{
 
         // 02_ 'Blog Section' butonuna tıklar
         Admin_dashboard_Page admin_dashboard_page = new Admin_dashboard_Page();
-        admin_dashboard_page.blockSectionButton.click();
+        admin_dashboard_page.blogSectionButton.click();
         extentTest.info("'Blog Section' butonuna tıklar");
 
         // 03_ 'Blogs' butonuna tıklar
@@ -162,7 +162,7 @@ public class Us_029 extends TestBaseRapor{
 
         // 02_ 'Blog Section' butonuna tıklar
         Admin_dashboard_Page admin_dashboard_page = new Admin_dashboard_Page();
-        admin_dashboard_page.blockSectionButton.click();
+        admin_dashboard_page.blogSectionButton.click();
         extentTest.info("'Blog Section' butonuna tıklar");
 
         // 03_ 'Blogs' butonuna tıklar
