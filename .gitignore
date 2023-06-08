@@ -32,4 +32,5 @@ build/
 ### Mac OS ###
 .DS_Store
 *.html
-*.png
+*.swp
+
