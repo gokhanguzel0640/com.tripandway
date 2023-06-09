@@ -11,6 +11,26 @@ public class Traveller_loginPage {
 
         PageFactory.initElements(Driver.getDriver(),this);
     }
+
+
+    @FindBy(xpath = "/html/body/div[4]/div/div/div[2]/div/a[2]")
+    public WebElement loginPageButton;
+
+    @FindBy(xpath = "(//input[@class='form-control'])[1]")
+    public WebElement emailBox;
+
+    @FindBy(xpath = "(//input[@class='form-control'])[2]")
+    public  WebElement passwordBox;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement loginButton;
+
+    @FindBy(xpath = "//button[@class ='wpcc-btn']")
+    public WebElement acceptCookies;
+
+    @FindBy(xpath = "/html/body/div[6]/div/div/div[2]/div/div/div[1]")
+    public WebElement comletedOrdersButton;
+
     @FindBy(xpath = "//*[text()='ACCEPT']")
     public WebElement acceptButonu;
 
@@ -28,5 +48,6 @@ public class Traveller_loginPage {
 
     @FindBy(className = "logo")
     public WebElement anasayfaGoruntuleme;
+
 
 }
