@@ -7,6 +7,7 @@ import utilities.Driver;
 
 public class FaqPage {
 
+
     public FaqPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -15,4 +16,5 @@ public class FaqPage {
 
     @FindBy(xpath = "/html/body/div[7]/div/div[2]/div")
     public WebElement faqPageElement;
+
 }
