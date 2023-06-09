@@ -86,7 +86,29 @@ public class Us007 extends TestBaseRapor {
         Assert.assertTrue(footerPage.twitterIcon.isDisplayed());
         extentTest.pass("Verifies that the twitter icon is visible and active");
         footerPage.twitterIcon.click();//bug
-        extentTest.info("Bug");
+        extentTest.info("click on twitter icon");
+
+        String IlksayfaninHandleDegeri=Driver.getDriver().getWindowHandle();
+        Set<String> TumHandleDegerleri=Driver.getDriver().getWindowHandles();
+
+        String ikinciSayfaHandleDegeri="";
+        for (String each:TumHandleDegerleri
+        ) {
+            if (!each.equals(IlksayfaninHandleDegeri)){
+                ikinciSayfaHandleDegeri=each;
+            }
+
+
+        }
+
+        Driver.getDriver().switchTo().window(ikinciSayfaHandleDegeri);
+        String actualUrl=Driver.getDriver().getCurrentUrl();
+        String expectedUrl="twitter";
+        Assert.assertTrue(actualUrl.contains(expectedUrl));
+        extentTest.pass("Tests that second tab's Url contains desired word");
+        Driver.closeDriver();
+
+
 
 
 
@@ -149,7 +171,29 @@ public class Us007 extends TestBaseRapor {
         Assert.assertTrue(footerPage.pinterestIcon.isEnabled());
         extentTest.pass("pVerifies that the pinterest icon is visible and active");
         footerPage.pinterestIcon.click();//bug
-        extentTest.info("BUG");
+        extentTest.info("clicks on pinterest icon");
+
+        String IlksayfaninHandleDegeri=Driver.getDriver().getWindowHandle();
+        Set<String> TumHandleDegerleri=Driver.getDriver().getWindowHandles();
+
+        String ikinciSayfaHandleDegeri="";
+        for (String each:TumHandleDegerleri
+        ) {
+            if (!each.equals(IlksayfaninHandleDegeri)){
+                ikinciSayfaHandleDegeri=each;
+            }
+
+
+        }
+
+        Driver.getDriver().switchTo().window(ikinciSayfaHandleDegeri);
+        String actualUrl=Driver.getDriver().getCurrentUrl();
+        String expectedUrl="pinterest";
+        Assert.assertTrue(actualUrl.contains(expectedUrl));
+        extentTest.pass("Tests that second tab's Url contains desired word");
+        Driver.closeDriver();
+
+
 
 
 
