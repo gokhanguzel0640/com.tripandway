@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.Packages_Page;
-import pages.Traveller_loginPage;
+import pages.PackagesPage_US22;
+import pages.Traveller_loginPage22;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 import java.util.Random;
@@ -18,8 +18,8 @@ public class US24 extends TestBaseRapor{
         extentTest = extentReports.createTest("PACKAGES TEST","The user should be able to log in" +
                 " and successfully navigate to the package page and purchase any package.");
 
-        Packages_Page packages_page = new Packages_Page();
-        Traveller_loginPage traveller_loginPage = new Traveller_loginPage();
+        PackagesPage_US22 packages_page = new PackagesPage_US22();
+        Traveller_loginPage22 traveller_loginPage = new Traveller_loginPage22();
 
         //01_User goes to https://qa.tripandway.com/
         Driver.getDriver().get("https://qa.tripandway.com/");

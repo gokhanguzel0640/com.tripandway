@@ -2,8 +2,8 @@ package tests.us_022_023_024_025;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.Packages_Page;
-import pages.Traveller_loginPage;
+import pages.PackagesPage_US22;
+import pages.Traveller_loginPage22;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
@@ -15,8 +15,8 @@ public class US25 extends TestBaseRapor {
         extentTest = extentReports.createTest("PAYMENT HISTORY TEST",
                 "The user successfully navigates to the packages page");
 
-        Packages_Page packages_page = new Packages_Page();
-        Traveller_loginPage traveller_loginPage = new Traveller_loginPage();
+        PackagesPage_US22 packages_page = new PackagesPage_US22();
+        Traveller_loginPage22 traveller_loginPage = new Traveller_loginPage22();
         SoftAssert softAssert=new SoftAssert();
 
         extentTest.info("User Trip and way goes to the homepage,email," +

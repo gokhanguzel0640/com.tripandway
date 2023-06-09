@@ -2,10 +2,9 @@ package tests.us_022_023_024_025;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.Traveller_loginPage;
+import pages.Traveller_loginPage22;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
@@ -21,7 +20,7 @@ public class US22 extends TestBaseRapor {
 
 //01_User goes to https://qa.tripandway.com/
         Driver.getDriver().get("https://qa.tripandway.com/");
-        Traveller_loginPage traveller_loginPage = new Traveller_loginPage();
+        Traveller_loginPage22 traveller_loginPage = new Traveller_loginPage22();
  //02_User clicks on the "Login" button
         traveller_loginPage.loginlinki.click();
  //User accepts cookies
@@ -53,7 +52,7 @@ public class US22 extends TestBaseRapor {
 
         //01_User goes to https://qa.tripandway.com/
         Driver.getDriver().get("https://qa.tripandway.com/");
-        Traveller_loginPage traveller_loginPage = new Traveller_loginPage();
+        Traveller_loginPage22 traveller_loginPage = new Traveller_loginPage22();
 
         extentTest.info("User goes to homepage");
 
@@ -97,7 +96,7 @@ public class US22 extends TestBaseRapor {
 
         //01_User goes to https://qa.tripandway.com/
         Driver.getDriver().get("https://qa.tripandway.com/");
-        Traveller_loginPage traveller_loginPage = new Traveller_loginPage();
+        Traveller_loginPage22 traveller_loginPage = new Traveller_loginPage22();
 
         extentTest.info("The user goes to the homepage, fills in the required fields");
         //02_User clicks on the "Login" button

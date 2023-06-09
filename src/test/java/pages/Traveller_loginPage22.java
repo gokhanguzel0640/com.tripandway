@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class Traveller_loginPage {
+public class Traveller_loginPage22 {
 
 
-    public Traveller_loginPage(){
+    public Traveller_loginPage22(){
         PageFactory.initElements(Driver.getDriver(),this);}
 
 

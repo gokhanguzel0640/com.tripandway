@@ -1,12 +1,9 @@
 package tests.us_022_023_024_025;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.Packages_Page;
-import pages.Traveller_loginPage;
+import pages.PackagesPage_US22;
+import pages.Traveller_loginPage22;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
@@ -19,8 +16,8 @@ public class US23 extends TestBaseRapor {
         extentTest=extentReports.createTest("Logout Test " +
                 "User must be able to log out");
 
-        Traveller_loginPage travellerLoginPage=new Traveller_loginPage();
-        Packages_Page packages_page = new Packages_Page();
+        Traveller_loginPage22 travellerLoginPage=new Traveller_loginPage22();
+        PackagesPage_US22 packages_page = new PackagesPage_US22();
         SoftAssert softAssert=new SoftAssert();
 
         extentTest.info("User goes to home page, enters email, password");
