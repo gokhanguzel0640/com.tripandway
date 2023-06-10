@@ -47,7 +47,7 @@ public class US25 extends TestBaseRapor {
         String expectedContent2 = "View All Payments";
         String actualContent2 = traveller_loginPage.viewAllPayments.getText();
         softAssert.assertTrue(actualContent2.contains(expectedContent2));
-        extentTest.info("User was able to control the payments made");
+        extentTest.pass("User was able to control the payments made");
 
         //softAssert.assertAll();
 
