@@ -70,19 +70,20 @@ public class Us007 extends TestBaseRapor {
 
 
 
+
     }@Test
     public void test02() {
         extentTest=extentReports.createTest("social media viewing test");
         footerPage=new FooterPage();
         actions=new Actions(Driver.getDriver());
         Driver.getDriver().get(ConfigReader.getProperty("twUrl"));
-        extentTest=extentReports.createTest("user goes to tripandway homepage");
+        extentTest.info("user goes to tripandway homepage");
 
 
         actions.sendKeys(Keys.END).perform();
-        extentTest=extentReports.createTest("goes to user footer");
+        extentTest.info("goes to user footer");
         footerPage.cookiesClick.click();
-        extentTest=extentReports.createTest("clicks on accept cookies button");
+        extentTest.info("clicks on accept cookies button");
         Assert.assertTrue(footerPage.twitterIcon.isDisplayed());
         extentTest.pass("Verifies that the twitter icon is visible and active");
         footerPage.twitterIcon.click();//bug

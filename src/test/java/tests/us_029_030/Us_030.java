@@ -29,7 +29,7 @@ public class Us_030 extends TestBaseRapor {
 
         ReusableMethods.adminlogin();
         extentTest.info("User reaches to https://qa.tripandway.com/admin/login, \n" +
-                                                   "Enters the e-mail address, \n" +
+                                                   "Enters the e-mail address, \n" + 
                                                    "Enters the password, \n" +
                                                    "Clicks on the Login button");
 
